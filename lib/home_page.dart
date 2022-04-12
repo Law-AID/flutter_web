@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:law_aid/constants.dart';
+
 
 class HomePage extends StatefulWidget {
 
@@ -8,6 +10,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+
+  TextEditingController serachText = TextEditingController();
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.w500
                     )),
                     SizedBox(
-                      width: 30,
+                      width: 40,
                     ),
                     Text("About us", style: GoogleFonts.poppins(
                         color: Color(0xff453200),
@@ -47,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.w500
                     )),
                     SizedBox(
-                      width: 30,
+                      width: 40,
                     ),
                     Text("Search", style: GoogleFonts.poppins(
                         color: Color(0xff453200),
@@ -55,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.w500
                     )),
                     SizedBox(
-                      width: 30,
+                      width: 40,
                     ),
                     Text("Brief", style: GoogleFonts.poppins(
                         color: Color(0xff453200),
@@ -65,6 +73,38 @@ class _HomePageState extends State<HomePage> {
                   ],
                 )
               ],
+            ),
+            Expanded(
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Lorem Ipusm dol solor olasa random",
+                        style: GoogleFonts.poppins(
+                          fontSize: 38,
+                          fontWeight: FontWeight.w700,
+                          color: LawAidColor.primaryColor,
+                        ),
+                      ),
+                      Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                      style: GoogleFonts.poppins(
+                        color: LawAidColor.textColor,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16
+                      ),),
+                      // Container(
+                      //   child: TextFormField(
+                      //     controller: serachText,
+                      //
+                      //   ),
+                      // ),
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
