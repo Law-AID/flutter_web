@@ -89,18 +89,55 @@ class _HomePageState extends State<HomePage> {
                           color: LawAidColor.primaryColor,
                         ),
                       ),
-                      Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                      style: GoogleFonts.poppins(
-                        color: LawAidColor.textColor,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16
-                      ),),
-                      // Container(
-                      //   child: TextFormField(
-                      //     controller: serachText,
-                      //
-                      //   ),
-                      // ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        width: 450,
+                        child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        style: GoogleFonts.poppins(
+                          color: LawAidColor.textColor,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16
+                        ),),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      MouseRegion(
+                        child: Container(
+                          height: 50,
+                          width: 400,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0xff39230014),
+                                    offset: Offset(0, 2),
+                                    blurRadius: 60)
+                              ]),
+                          child: TextField(
+                            controller: serachText,
+                            decoration: InputDecoration(
+                              filled: true,
+                              hintText: "Search for...",
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.transparent),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.transparent),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   )
                 ],
