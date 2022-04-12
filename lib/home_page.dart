@@ -1,26 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:law_aid/constants.dart';
 
-
 class HomePage extends StatefulWidget {
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-
-
   TextEditingController serachText = TextEditingController();
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffFFFBF8),
-
       body: Padding(
         padding: EdgeInsets.only(left: 50, right: 50, top: 20),
         child: Column(
@@ -32,44 +26,43 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "LawAID",
                   style: GoogleFonts.poppins(
-                    color: Color(0xff896953),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700
-                  ),
+                      color: Color(0xff896953),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700),
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Home", style: GoogleFonts.poppins(
-                      color: Color(0xff453200),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500
-                    )),
+                    Text("Home",
+                        style: GoogleFonts.poppins(
+                            color: Color(0xff453200),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500)),
                     SizedBox(
                       width: 40,
                     ),
-                    Text("About us", style: GoogleFonts.poppins(
-                        color: Color(0xff453200),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500
-                    )),
+                    Text("About us",
+                        style: GoogleFonts.poppins(
+                            color: Color(0xff453200),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500)),
                     SizedBox(
                       width: 40,
                     ),
-                    Text("Search", style: GoogleFonts.poppins(
-                        color: Color(0xff453200),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500
-                    )),
+                    Text("Search",
+                        style: GoogleFonts.poppins(
+                            color: Color(0xff453200),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500)),
                     SizedBox(
                       width: 40,
                     ),
-                    Text("Brief", style: GoogleFonts.poppins(
-                        color: Color(0xff453200),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500
-                    )),
+                    Text("Brief",
+                        style: GoogleFonts.poppins(
+                            color: Color(0xff453200),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500)),
                   ],
                 )
               ],
@@ -81,12 +74,15 @@ class _HomePageState extends State<HomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "Lorem Ipusm dol solor olasa random",
-                        style: GoogleFonts.poppins(
-                          fontSize: 38,
-                          fontWeight: FontWeight.w700,
-                          color: LawAidColor.primaryColor,
+                      Container(
+                        width: 450,
+                        child: Text(
+                          "Lorem Ipusm dol solor olasa random",
+                          style: GoogleFonts.poppins(
+                            fontSize: 38,
+                            fontWeight: FontWeight.w700,
+                            color: LawAidColor.primaryColor,
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -94,12 +90,13 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Container(
                         width: 450,
-                        child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                        style: GoogleFonts.poppins(
-                          color: LawAidColor.textColor,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 16
-                        ),),
+                        child: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          style: GoogleFonts.poppins(
+                              color: LawAidColor.textColor,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 16),
+                        ),
                       ),
                       SizedBox(
                         height: 30,
@@ -127,17 +124,27 @@ class _HomePageState extends State<HomePage> {
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.transparent),
+                                borderSide:
+                                    BorderSide(color: Colors.transparent),
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.transparent),
+                                borderSide:
+                                    BorderSide(color: Colors.transparent),
                                 borderRadius: BorderRadius.circular(15),
                               ),
                             ),
                           ),
                         ),
                       ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 10),
+                      Container(height: MediaQuery.of(context).size.height*.8,child: Image.asset('images/Justice-pana.png'))
                     ],
                   )
                 ],
