@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:law_aid/home_page.dart';
+import 'package:law_aid/summarization-page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: SummarizationPage(),
     );
   }
 }
