@@ -158,20 +158,18 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 10),
+            SizedBox(height: 10,),
             Container(height: MediaQuery
                 .of(context)
                 .size
-                .height * .7, width: MediaQuery
-                .of(context)
-                .size
-                .height * 1.3, child: Image.asset('images/Justice-pana.png'))
+                .height * .7, width: 370, child: Image.asset('images/Justice-pana.png'))
           ],
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            decoration
           ],
 
         )
